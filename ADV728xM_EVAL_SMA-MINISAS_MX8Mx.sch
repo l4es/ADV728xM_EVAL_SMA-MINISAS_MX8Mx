@@ -57,22 +57,6 @@ F 3 "" H 3450 3175 50  0001 C CNN
 	1    3450 3175
 	1    0    0    -1  
 $EndComp
-$Comp
-L 1-84953-5:1-84953-5 U1
-U 1 1 61015BC6
-P 8925 4125
-F 0 "U1" H 9158 4171 50  0000 L CNN
-F 1 "1-84953-5" H 9158 4080 50  0000 L CNN
-F 2 "footprints:TE_1-84953-5" H 8925 4125 50  0001 L BNN
-F 3 "15" H 8925 4125 50  0001 L BNN
-F 4 "Connector" H 8925 4125 50  0001 L BNN "Field4"
-F 5 "1-84953-5" H 8925 4125 50  0001 L BNN "Field5"
-F 6 "https://www.te.com/usa-en/product-1-84953-5.html?te_bu=Cor&te_type=disp&te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&elqCampaignId=32493" H 8925 4125 50  0001 L BNN "Field6"
-F 7 "Compliant" H 8925 4125 50  0001 L BNN "Field7"
-F 8 "1 mm[.039 in]" H 8925 4125 50  0001 L BNN "Field8"
-	1    8925 4125
-	1    0    0    -1  
-$EndComp
 Text Label 2300 1525 0    50   ~ 0
 D0_N
 Text Label 2300 2650 0    50   ~ 0
@@ -105,68 +89,55 @@ Wire Wire Line
 	8625 4025 7375 4025
 Connection ~ 7375 4025
 Wire Wire Line
-	7375 4025 7375 4325
-Wire Wire Line
-	8625 4325 7375 4325
+	8625 4525 7375 4525
 $Comp
 L power:+3V3 #PWR0106
 U 1 1 610244FC
-P 7575 4675
-F 0 "#PWR0106" H 7575 4525 50  0001 C CNN
-F 1 "+3V3" H 7590 4848 50  0000 C CNN
-F 2 "" H 7575 4675 50  0001 C CNN
-F 3 "" H 7575 4675 50  0001 C CNN
-	1    7575 4675
-	1    0    0    -1  
+P 7700 4725
+F 0 "#PWR0106" H 7700 4575 50  0001 C CNN
+F 1 "+3V3" H 7715 4898 50  0000 C CNN
+F 2 "" H 7700 4725 50  0001 C CNN
+F 3 "" H 7700 4725 50  0001 C CNN
+	1    7700 4725
+	0    -1   -1   0   
 $EndComp
-NoConn ~ 8625 3825
-NoConn ~ 8625 3925
 Wire Wire Line
-	8625 4625 7800 4625
+	10450 4425 9625 4425
 Wire Wire Line
-	8625 4725 7800 4725
-Wire Wire Line
-	8625 4225 7800 4225
-Wire Wire Line
-	8625 4125 7800 4125
+	10450 4325 9625 4325
 Wire Wire Line
 	8625 3625 7800 3625
 Wire Wire Line
 	8625 3525 7800 3525
-Text Label 7900 3525 0    50   ~ 0
+Wire Wire Line
+	10450 3625 9625 3625
+Wire Wire Line
+	10450 3525 9625 3525
+Text Label 9725 3525 0    50   ~ 0
 D0_N
-Text Label 7900 3625 0    50   ~ 0
+Text Label 9725 3625 0    50   ~ 0
 D0_P
-Text Label 7900 4125 0    50   ~ 0
+Text Label 7900 3525 0    50   ~ 0
 CLK_N
-Text Label 7900 4225 0    50   ~ 0
+Text Label 7900 3625 0    50   ~ 0
 CLK_P
-Text Label 7900 4625 0    50   ~ 0
-I2C_SCL
-Text Label 7900 4725 0    50   ~ 0
-I2C_SDA
+Text Label 9725 4425 0    50   ~ 0
+I2C_SCL_1V8
+Text Label 9725 4325 0    50   ~ 0
+I2C_SDA_1V8
 $Comp
 L Device:R_US R1
 U 1 1 610D2196
-P 8150 5075
-F 0 "R1" V 8037 5075 50  0000 C CNN
-F 1 "0" V 8036 5075 50  0001 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8190 5065 50  0001 C CNN
-F 3 "~" H 8150 5075 50  0001 C CNN
-	1    8150 5075
+P 8050 4725
+F 0 "R1" V 7937 4725 50  0000 C CNN
+F 1 "0" V 7936 4725 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8090 4715 50  0001 C CNN
+F 3 "~" H 8050 4725 50  0001 C CNN
+	1    8050 4725
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8625 4825 8450 4825
-Wire Wire Line
-	8450 4825 8450 5075
-Wire Wire Line
-	8450 5075 8300 5075
-Wire Wire Line
-	7575 4675 7575 5075
-Wire Wire Line
-	7375 4325 7375 5625
-Connection ~ 7375 4325
+	8625 4725 8525 4725
 Connection ~ 7375 5625
 Wire Wire Line
 	7375 5625 7375 5675
@@ -287,10 +258,10 @@ F 3 "" H 5300 5175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L NLSX5014DTR2G:NLSX5014DTR2G U2
+L NLSX5014DTR2G:NLSX5014DTR2G U1
 U 1 1 61277B63
 P 2400 5200
-F 0 "U2" H 3400 5587 60  0000 C CNN
+F 0 "U1" H 3400 5587 60  0000 C CNN
 F 1 "NLSX5014DTR2G" H 3400 5481 60  0000 C CNN
 F 2 "footprints:NLSX5014DTR2G" H 3400 5440 60  0001 C CNN
 F 3 "" H 2400 5200 60  0000 C CNN
@@ -314,17 +285,17 @@ Wire Wire Line
 Wire Wire Line
 	4725 5200 4400 5200
 Text Label 1550 5300 0    50   ~ 0
-I2C_SDA
+I2C_SCL_1V8
 Text Label 1550 5400 0    50   ~ 0
-I2C_SCL
+I2C_SDA_1V8
 Text Label 4725 5400 0    50   ~ 0
-I2C_SDA_3V3
-Text Label 4750 5500 0    50   ~ 0
 I2C_SCL_3V3
+Text Label 4750 5500 0    50   ~ 0
+I2C_SDA_3V3
 Text Label 1550 5500 0    50   ~ 0
-GPIO0_1V8
+nRST_1V8
 Text Label 1550 5600 0    50   ~ 0
-GPIO1_1V8
+PWDN_1V8
 Text Label 4750 5600 0    50   ~ 0
 GPIO0_3V3
 Text Label 4775 5800 0    50   ~ 0
@@ -472,8 +443,6 @@ F 7 "N/A" H 3350 1625 50  0001 L BNN "PARTREV"
 $EndComp
 Wire Wire Line
 	3450 2650 4075 2650
-Wire Wire Line
-	7575 5075 8000 5075
 $Comp
 L Connector:Conn_01x04_Male J6
 U 1 1 614680E2
@@ -501,11 +470,186 @@ $EndComp
 Wire Wire Line
 	7700 1600 7375 1600
 Wire Wire Line
+	10450 4225 9625 4225
+Text Label 9725 4225 0    50   ~ 0
+nRST_1V8
+Wire Wire Line
 	8625 4425 7800 4425
 Text Label 7900 4425 0    50   ~ 0
-GPIO1_1V8
+PWDN_1V8
+$Comp
+L 1888863-4:1888863-4 J9
+U 1 1 610F506A
+P 9125 4425
+F 0 "J9" H 9125 5692 50  0000 C CNN
+F 1 "1888863-4" H 9125 5601 50  0000 C CNN
+F 2 "footprints:TE_1888863-4" H 9125 4425 50  0001 L BNN
+F 3 "1888863-4" H 9125 4425 50  0001 L BNN
+F 4 "Compliant" H 9125 4425 50  0001 L BNN "Field4"
+	1    9125 4425
+	-1   0    0    -1  
+$EndComp
+Connection ~ 7375 4525
 Wire Wire Line
-	8625 4525 7800 4525
-Text Label 7900 4525 0    50   ~ 0
-GPIO0_1V8
+	7375 4025 7375 4525
+$Comp
+L power:+1V8 #PWR0115
+U 1 1 6114A01F
+P 7700 3925
+F 0 "#PWR0115" H 7700 3775 50  0001 C CNN
+F 1 "+1V8" H 7715 4098 50  0000 C CNN
+F 2 "" H 7700 3925 50  0001 C CNN
+F 3 "" H 7700 3925 50  0001 C CNN
+	1    7700 3925
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8625 3925 7800 3925
+Wire Wire Line
+	7800 3825 7800 3925
+Connection ~ 7800 3925
+Wire Wire Line
+	7800 3925 7700 3925
+Wire Wire Line
+	8525 4625 8525 4725
+Connection ~ 8525 4725
+Wire Wire Line
+	8525 4625 8625 4625
+Wire Wire Line
+	7375 4525 7375 4825
+Wire Wire Line
+	8625 4825 7375 4825
+Connection ~ 7375 4825
+Wire Wire Line
+	7700 4725 7900 4725
+Wire Wire Line
+	8200 4725 8525 4725
+Wire Wire Line
+	9625 3425 10725 3425
+$Comp
+L power:GND #PWR0116
+U 1 1 6118931C
+P 10725 5675
+F 0 "#PWR0116" H 10725 5425 50  0001 C CNN
+F 1 "GND" H 10730 5502 50  0000 C CNN
+F 2 "" H 10725 5675 50  0001 C CNN
+F 3 "" H 10725 5675 50  0001 C CNN
+	1    10725 5675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9625 5325 10725 5325
+Connection ~ 10725 5325
+Wire Wire Line
+	10725 5325 10725 5675
+Wire Wire Line
+	9625 5125 10725 5125
+Connection ~ 10725 5125
+Wire Wire Line
+	10725 5125 10725 5325
+Wire Wire Line
+	9625 4825 10725 4825
+Connection ~ 10725 4825
+Wire Wire Line
+	10725 4825 10725 5125
+Wire Wire Line
+	9625 4525 10725 4525
+Connection ~ 10725 4525
+Wire Wire Line
+	10725 4525 10725 4825
+Wire Wire Line
+	9625 4025 10725 4025
+Connection ~ 10725 4025
+Wire Wire Line
+	10725 4025 10725 4525
+Wire Wire Line
+	9625 3725 10725 3725
+Wire Wire Line
+	10725 3425 10725 3725
+Connection ~ 10725 3725
+Wire Wire Line
+	10725 3725 10725 4025
+Wire Wire Line
+	7800 3825 8625 3825
+NoConn ~ 9625 3825
+NoConn ~ 9625 3925
+NoConn ~ 9625 4625
+NoConn ~ 9625 4725
+NoConn ~ 9625 4925
+NoConn ~ 9625 5025
+Wire Wire Line
+	7375 4825 7375 5125
+Wire Wire Line
+	8625 5125 7375 5125
+Connection ~ 7375 5125
+Wire Wire Line
+	7375 5125 7375 5625
+$Comp
+L power:+5V #PWR0117
+U 1 1 611D2C95
+P 7700 5025
+F 0 "#PWR0117" H 7700 4875 50  0001 C CNN
+F 1 "+5V" V 7715 5153 50  0000 L CNN
+F 2 "" H 7700 5025 50  0001 C CNN
+F 3 "" H 7700 5025 50  0001 C CNN
+	1    7700 5025
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8625 5025 8525 5025
+Wire Wire Line
+	8625 4925 8525 4925
+Wire Wire Line
+	8525 4925 8525 5025
+Connection ~ 8525 5025
+Wire Wire Line
+	8525 5025 7700 5025
+Wire Wire Line
+	9625 4125 10450 4125
+Text Label 9725 4125 0    50   ~ 0
+MCLK_1V8
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 6120B58E
+P 1575 6925
+F 0 "H1" H 1675 6971 50  0000 L CNN
+F 1 "MountingHole" H 1675 6880 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 1575 6925 50  0001 C CNN
+F 3 "~" H 1575 6925 50  0001 C CNN
+	1    1575 6925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 6120D4F9
+P 2675 6925
+F 0 "H2" H 2775 6971 50  0000 L CNN
+F 1 "MountingHole" H 2775 6880 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2675 6925 50  0001 C CNN
+F 3 "~" H 2675 6925 50  0001 C CNN
+	1    2675 6925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 61210657
+P 3600 6925
+F 0 "H3" H 3700 6971 50  0000 L CNN
+F 1 "MountingHole" H 3700 6880 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 3600 6925 50  0001 C CNN
+F 3 "~" H 3600 6925 50  0001 C CNN
+	1    3600 6925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 6121065D
+P 4700 6925
+F 0 "H4" H 4800 6971 50  0000 L CNN
+F 1 "MountingHole" H 4800 6880 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 4700 6925 50  0001 C CNN
+F 3 "~" H 4700 6925 50  0001 C CNN
+	1    4700 6925
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
